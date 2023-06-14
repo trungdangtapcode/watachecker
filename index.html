@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>WataChecker</title>
+	<style>
+		#container {
+			width: 100%;
+			position: relative;
+		}
+
+		#container img {
+			width: 100%;
+			height: 100%;
+		}
+
+		canvas {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+
+		#container canvas {
+			width: 100%;
+			height: 100%;
+		}
+
+		#webcamContainer {
+			width: 100%;
+			position: relative;
+		}
+
+		#image-list {
+			width: 50%;
+			position: relative;
+		}
+
+		#image-container-table {
+			width: 100%;
+			position: relative;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">       
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+
+	<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">    
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<!-- <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" /> -->
+	
+	<link rel="stylesheet" type="text/css" href="csss/file_manager.css">
+	<link rel="stylesheet" type="text/css" href="csss/login_signup.css">
+	<link rel="stylesheet" type="text/css" href="csss/checker_list.css">
+</head>
+
+<body>
+	<h1>WataChecker</h1>
+
+	<button id="test_button-face-check">Click me</button>
+	<button onclick="goToSchoolManager()">Go to</button>
+	<button onclick="goToFaceChecker()">Check me</button>
+	<button onclick="goToCheckerList()">Check them</button>
+	<button onclick="goToLoginSignUp()">Log me in</button>
+	<!-- href="#" thi tu dong teleport len dau trang -->
+	<a href="javascript:void(0)" data-toggle="popover" data-html="true" data-content="<div class=&quot;w3-btn w3-hover-green&quot;>đổi tên</div><br><div class=&quot;w3-btn w3-hover-red&quot;>xóa lớp</div>">aaassa</a>
+</body>
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.js"
+	integrity="sha256-JOJ7NmVm2chxYZ1KPcAYd2bwVK7NaFj9QKMp7DClews=" crossorigin="anonymous"></script>
+
+<!--Popper.js phai de truoc jquery.js; neu khong phai dat tren <head>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<script type="module" src="./scripts/firebase.js"></script>
+<script type="module" src="./scripts/file_manager.js"></script>
+<script type="module" src="scripts/webcamDectector.js"></script>
+<script type="module" src="scripts/checker_list.js"></script>
+<script type="module" src="scripts/login_signup.js"></script>
+<script type="module" src="scripts/profile.js"></script>
+
+<script>
+	$(document).ready(function(){
+	  $('[data-toggle="popover"]').popover();   
+	});
+</script>
+
+</html>

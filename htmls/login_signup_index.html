@@ -1,0 +1,76 @@
+<div class="container"><div class="row">
+    <div class="card"><div class="card-body">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <form id="login-form" action="javascript:void(0)" method="post" role="form" style="display: block;">
+                    <div class="form-group"><div class="form-floating mb-3"><h2>Đăng nhập</h2></div></div>
+                    <div class="form-group"><div class="form-floating mb-3">
+                        <input type="email" name="email" id="loginEmail" tabindex="1" class="form-control" placeholder="Email" value="">
+                        <label for="loginEmail">Email</label>
+                    </div></div>
+                    <div class="form-group"><div class="form-floating mb-3">
+                        <input type="password" name="password" id="loginPassword" tabindex="2" class="form-control" placeholder="Mật khẩu">
+                        <label for="loginPassword">Mật khẩu</label>
+                    </div></div>
+                    <div class="form-group"><div class="row"><div class="col">
+                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Đăng nhập" onclick="login()">
+                    </div></div></div>
+                    <div class="form-group"><div class="row"><div class="col">
+                        <div class="text-center">
+                            <a href="javascript:void(0);" tabindex="5" class="forgot-password" id="create-account" onclick="showSignup()">Chưa có tài khoản?</a>
+                        </div>
+                    </div></div></div>
+                </form>
+
+
+                <form id="signup-form" action="javascript:void(0)" method="post" role="form" style="display: none;">
+                    <div class="form-group"><div class="form-floating mb-3"><h2>Đăng ký</h2></div></div>
+                    <div class="form-group"><div class="form-floating mb-3">
+                        <input type="text" name="username" id="signupUsername" tabindex="1" class="form-control" placeholder="Tên người dùng" value="">
+                        <label for="signupUsername">Tên người dùng</label>
+                    </div></div>
+                    <div class="form-group"><div class="form-floating mb-3">
+                        <input type="email" name="email" id="signupEmail" tabindex="1" class="form-control" placeholder="Email" value="">
+                        <label for="signupEmail">Email</label>
+                    </div></div>
+                    <div class="form-group"><div class="form-floating mb-3">
+                        <input type="password" name="password" id="signupPassword" tabindex="2" class="form-control" placeholder="Mật khẩu">
+                        <label for="signupPassword">Mật khẩu</label>
+                    </div></div>
+                    <div class="form-group"><div class="form-floating mb-3">
+                        <input type="password" name="confirm-password" id="signupConfirmPassword" tabindex="2" class="form-control" placeholder="Xác nhận mật khẩu">
+                        <label for="signupConfirmPassword">Xác nhận mật khẩu</label>
+                    </div></div>
+                    <div class="form-group"><div class="form-floating mb-3">
+                        <select id="signupSchool" class="form-control" placeholder="Chọn trường">
+                            <option value="df70f4d5-f7dd-4e83-b2fe-fa589ae6aeae">THPT Bình Minh</option>
+                            <option value="df79f4d5-f7dd-4e83-b2fe-fa589ae6aaaa">THPT Hoàng Thái Hiếu</option>
+                            <option value="17aabe35-5a8a-4949-92aa-6275ae142a07">THPT Thử Nghiệm 1</option>
+                            <option value="06207ce3-541f-4b67-90d0-41f975e3dd32">THPT Thử Nghiệm 2</option>
+                        </select>
+                        <label for="signupSchool">Chọn trường</label>
+                    </div></div>
+                    <div class="form-group"><div class="form-floating mb-3">
+                        <select id="signupRole" class="form-control" placeholder="Chọn chức năng tài khoản">
+                            <option value=0>Máy kiểm tra</option>
+                            <option value=1>Giáo viên</option>
+                            <option value=2 disabled>Học sinh</option>
+                            <option value=3>Nhà trường</option>
+                        </select>
+                        <label for="signupRole">Chọn chức năng tài khoản</label>
+                    </div></div>
+                    <div class="form-group"><div class="row"><div class="col">
+                        <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Đăng ký" onclick="signup()">
+                    </div></div></div>
+                    <div class="form-group"><div class="row"><div class="col">
+                        <div class="text-center">
+                            <a href="javascript:void(0);" tabindex="5" class="forgot-password" id="create-account" onclick="showLogin()">Đã có tài khoản?</a>
+                        </div>
+                    </div></div></div>
+                </form>
+
+            </div>
+        </div>
+    </div></div>
+</div></div>

@@ -1,0 +1,107 @@
+<div class="container"><div class="row">
+    <div class="card"><div class="card-body">
+        <div class="col-12 col-lg-9">
+            <button id = "add-class-button" style = "background-color:brown" onclick="goToClassManager()"><i class='bx bx-arrow-back' ></i> Trở về</button>
+            <button id = "add-class-button" onclick="uploadStudentImage()"><i class='bx bx-cloud-upload'></i> Upload ảnh</button>
+            <button id = "add-class-button" style = "background-color:darkgoldenrod" onclick="loadStudentImage()"><i class='bx bx-reset'></i> Tải lại</button>
+            <button class="week-button" id = "view-face-button" style = "background-color:darkslategray" onclick="changeViewFaceStatus()"><i class='fas fa-eye' id="view-face-icon"></i></button>
+            
+        </div>
+        <br>
+        <div class="custom-file mb-3">
+            <input type="file" class="custom-file-input" id="customFile" name="filename" accept="image/jpeg, image/jpeg" onchange="getStudentImage(event)">
+            <label class="custom-file-label" for="customFile" id="label_uploadImageBar">Chọn ảnh</label>
+        </div>
+    </div></div>
+
+    <div class="card"><div class="card-body">
+        <form action="javascript:void(0)"> 
+            <div class="row">
+                <div class="col">
+                    <label>
+                        Thông tin học sinh
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="inputStudentName">Tên học sinh :</label>
+                    <input type="text" class="form-control" placeholder="" id="inputStudentName">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <label for="inputStudentBirthday">Ngày sinh :</label>
+                    <input type="date" class="form-control" placeholder="" id="inputStudentBirthday">
+                </div>
+                <div class="col">
+                    <label for="inputStudentBorn">Nơi sinh :</label>
+                    <input type="text" class="form-control" placeholder="" id="inputStudentBorn">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <label for="inputStudentIdentity">CCCD :</label>
+                    <input type="tel" class="form-control" placeholder="" id="inputStudentIdentity" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                </div>
+                <div class="col">
+                    <label for="inputStudentPhone">SĐT :</label>
+                    <input type="tel" class="form-control" placeholder="" id="inputStudentPhone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <button id = "add-class-button" class="float-right" style = "background-color:darkgreen" onclick="student_update_info()"><i class='bx bxs-save'></i> Cập nhật</button>
+                </div>
+            </div>
+        </form>
+    </div></div>
+</div></div>
+
+<div id="main-content" class="file_manager"><div class="container"><div class="row clearfix" id = "table_studentImage">
+    <div class="col-lg-3 col-md-4 col-sm-12"><div class="card"><div class="file"><a href="javascript:void(0);">
+        <div class="hover">
+            <button type="button" class="btn btn-icon btn-danger">
+                <i class="fa fa-trash"></i>
+            </button>
+        </div>
+        <div class="image">
+            <img src="https://www.bootdey.com/image/280x280/87CEFA/000000" alt="img" class="img-fluid">
+        </div>
+        <div class="file-name">
+            <p class="m-b-5 text-muted">img21545ds.jpg</p>
+            <small>Size: 2MB <span class="date text-muted">Dec 11, 2017</span></small>
+        </div>
+    </a></div></div></div>      
+    <div class="col-lg-3 col-md-4 col-sm-12"><div class="card"><div class="file"><a href="javascript:void(0);">
+        <div class="hover">
+            <button type="button" class="btn btn-icon btn-danger">
+                <i class="fa fa-trash"></i>
+            </button>
+        </div>
+        <div class="image">
+            <img src="https://www.bootdey.com/image/280x280/87CEFA/000000" alt="img" class="img-fluid">
+        </div>
+        <div class="file-name">
+            <p class="m-b-5 text-muted">img21545ds.jpg</p>
+            <small>Size: 2MB <span class="date text-muted">Dec 11, 2017</span></small>
+        </div>
+    </a></div></div></div>           
+</div></div></div>
+
+
+<div class="modal" id="modal-view-face"><div class="modal-dialog"><div class="modal-content">
+    <div class="modal-header">
+        <h4 class="modal-title">Khuôn mặt tìm thấy được</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+    </div>
+    <div class="modal-body" id="modal-view-face-body">
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+    </div>
+</div></div></div>
+  

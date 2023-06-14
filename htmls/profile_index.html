@@ -1,0 +1,85 @@
+<div class="row">
+    <div class="col-xl-4">
+        <!-- Profile picture card-->
+        <div class="card mb-4 mb-xl-0">
+            <div class="card-header">Ảnh đại diện</div>
+            <div class="card-body text-center">
+                <!-- Profile picture image-->
+                <img class="img-account-profile rounded-circle mb-2" src="https://i.pinimg.com/originals/fe/39/79/fe39796afbe7fc15900d25008d7174c4.jpg" alt="" style="aspect-ratio : 1 / 1; width:100%" id="profileImage">
+                <!-- Profile picture help block-->
+                <div class="small font-italic text-muted mb-4">ảnh định dạng JPG</div>
+                <!-- Profile picture upload button-->
+                <div class="custom-file mb-3">
+                    <input type="file" class="custom-file-input" id="customFile" name="filename" accept="image/jpeg, image/jpeg" onchange="getProfileImage(event)">
+                    <label class="custom-file-label" for="customFile" id="label_uploadImageBar">Chọn ảnh</label>
+                </div>
+                <button class="btn btn-primary" type="button" onclick="uploadProfileImage()">Upload hình ảnh</button>
+                <button class="btn btn-primary" type="button" onclick="loadHomePage()">Trở lại</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-8">
+        <!-- Account details card-->
+        <div class="card mb-4">
+            <div class="card-header">Thông tin tài khoản</div>
+            <div class="card-body">
+                <form action="javascript:void(0)">
+                    <!-- Form Group (username)-->
+                    <div class="mb-3">
+                        <label class="small mb-1" for="inputUsername">Tên người dùng </label>
+                        <input class="form-control" id="inputUsername" type="text" placeholder="Tên người dùng" value="username">
+                    </div>
+                    <!-- Form Row-->
+                    <div class="row gx-3 mb-3">
+                        <!-- Form Group (first name)-->
+                        <div class="col-md-6">
+                            <label class="small mb-1" for="inputFirstName">Tên </label>
+                            <input class="form-control" id="inputFirstName" type="text" placeholder="Tên" value="Valerie">
+                        </div>
+                        <!-- Form Group (last name)-->
+                        <div class="col-md-6">
+                            <label class="small mb-1" for="inputLastName">Họ </label>
+                            <input class="form-control" id="inputLastName" type="text" placeholder="Họ" value="Luna">
+                        </div>
+                    </div>
+                    <!-- Form Row        -->
+                    <div class="row gx-3 mb-3">
+                        <!-- Form Group (organization name)-->
+                        <div class="col-md-6">
+                            <label class="small mb-1" for="inputOrgName">Nhóm </label>
+                            <input class="form-control" id="inputOrgName" type="text" placeholder="Nhóm" value="Start Bootstrap">
+                        </div>
+                        <!-- Form Group (location)-->
+                        <div class="col-md-6">
+                            <label class="small mb-1" for="inputLocation">Địa chỉ </label>
+                            <input class="form-control" id="inputLocation" type="text" placeholder="Địa chỉ" value="San Francisco, CA">
+                        </div>
+                    </div>
+                    <!-- Form Group (email address)-->
+                    <div class="mb-3">
+                        <label class="small mb-1" for="inputEmailAddress">Email </label>
+                        <input class="form-control" id="inputEmailAddress" type="email" placeholder="Email" value="name@example.com">
+                    </div>
+                    <!-- Form Row-->
+                    <div class="row gx-3 mb-3">
+                        <!-- Form Group (phone number)-->
+                        <div class="col-md-6">
+                            <label class="small mb-1" for="inputPhone">SĐT</label>
+                            <input class="form-control" id="inputPhone" type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Số điện thoại" value="555-123-4567">
+                        </div>
+                        <!-- Form Group (birthday)-->
+                        <div class="col-md-6">
+                            <label class="small mb-1" for="inputBirthday">Ngày sinh </label>
+                            <input class="form-control" id="inputBirthday" type="date" name="birthday" placeholder="Ngày sinh" value="2005-05-27">
+                        </div>
+                    </div>
+                    <!-- Save changes button-->
+                    <div class="mb-3">
+                        <input type="submit" class="form-control btn btn-primary" type="button" onclick="profileSaveChange()" value="Lưu thay đổi">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,74 @@
+
+<div class="container">
+<div class="row">
+    <div class="card"><div class="card-body">
+        <div class="col-12 col-lg-9">
+            <button id = "add-class-button" onclick="addClass()"><i class='bx bx-add-to-queue'></i> Thêm lớp</button>
+            <button id = "add-class-button" style = "background-color:darkgoldenrod" onclick="loadClass()"><i class='bx bx-reset'></i> Tải lại</button>
+            <button id = "add-class-button" style = "background-color:brown" onclick="logout()"><i class='bx bxs-door-open' ></i> Đăng xuất</button>
+            <button id = "add-class-button" style = "background-color:cornflowerblue" onclick="goToProfile()"><i class='bx bxs-info-circle' ></i> Tài khoản</button>
+        </div>
+    </div></div>
+    <div class="card"><div class="card-body">
+        <table class="table table-striped table-hover table-sm mb-0" id = "classList">
+            <thead>
+                <tr>
+                    <th><i class='bx bx-rename'></i> Lớp</th>
+                    <th><i class='bx bx-body'></i> Sĩ số</th>
+                    <th><i class='bx bx-barcode'></i> ID</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div></div>
+    <div class="card"><div class="card-body">
+        <form action="javascript:void(0)"> 
+            <div class="row">
+                <div class="col">
+                    <label>
+                        Thông tin trường
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="inputSchoolName">Tên trường:</label>
+                    <input type="text" class="form-control" placeholder="" id="inputSchoolName">
+                </div>
+                <div class="col">
+                    <label for="inputSchoolFrom">Năm thành lập:</label>
+                    <input type="number" min="0" class="form-control" placeholder="" id="inputSchoolFrom">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <label for="inputSchoolSlogan">Khẩu hiệu:</label>
+                    <input type="text" class="form-control" placeholder="" id="inputSchoolSlogan">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <button id = "add-class-button" class="float-right" style = "background-color:darkgreen" onclick="school_update_info()"><i class='bx bxs-save'></i> Cập nhật</button>
+                </div>
+            </div>
+        </form>
+    </div></div>
+    <div class="card"><div class="card-body">
+        <div class="col-12" style="height:100px; display: inline-block;" id="welcome-box">
+        </div>
+        <br><br>
+        <!-- card+card-body margin top but dont have bottom so we use br-->
+    </div></div>
+</div></div>
+
+
+
+<script>
+    console.log("guuu");
+    getSchoolInfo(schood_id);
+</script>

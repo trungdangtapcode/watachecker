@@ -1,0 +1,31 @@
+<div class="container"><div class="row">
+    <div class="card"><div class="card-body">
+        <div class="col-12" style="height:100px; display: inline-block;" id="welcome-box">
+        </div>
+        <br><br>
+        <!-- card+card-body margin top but dont have bottom so we use br-->
+    </div></div>
+    <div class="card"><div class="card-body">
+        <div class="col-12 col-lg-9">
+            <button id = "add-class-button" style = "background-color:brown" onclick="logout()"><i class='bx bxs-door-open' ></i> Đăng xuất</button>
+            <button id = "add-class-button" style = "background-color:cornflowerblue" onclick="goToProfile()"><i class='bx bxs-info-circle' ></i> Tài khoản</button>
+            <button class="week-button" id="previous-week-button" style = "background-color:darkolivegreen" onclick="previousWeek()"><i class='bx bx-left-arrow-alt' ></i>Tuần trước</button>
+            <button class="week-button" id="next-week-button" style = "background-color:darkolivegreen" onclick="nextWeek()" disabled>Tuần sau <i class='bx bx-right-arrow-alt' ></i></button>
+            <button class="week-button" id="date-box" style = "background-color:darkslateblue" disabled></button>
+        </div>
+        <br>
+        <form action="javascript:void(0)">
+            <div class="row">
+                <div class="col-6"><div class="form-floating mb-3">
+                    <input type="time" id="time-late-box" name="appt" class="form-control" value="06:45">    
+                    <label for="time-late-box">Thời gian vào học</label>
+                </div></div>
+                <div class="col">
+                    <button class="week-button" style = "background-color:darkgreen" onclick="changeTimeLate()"><i class='bx bxs-time' ></i> Cập nhật</button>
+                </div>
+            </div>
+        </form>
+    </div></div>
+</div></div>
+<div class="container"><div class="row" id="presenceTable">
+</div></div>
